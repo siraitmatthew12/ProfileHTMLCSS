@@ -1,0 +1,628 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+.navbar a:link {
+    color: black;
+text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+  }
+  
+.navbar a:visited {
+    color: black;
+
+text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+  }
+  
+.navbar a:hover {
+    color: white;
+text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    transition: all 0.4s ease;
+  }
+.navbar ul {
+    list-style-type: none;
+  }
+
+.navbar {
+    background: #c4c4c4 ;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1441px;
+    margin:0 auto;
+    padding:0 50px;
+}
+.logo{
+    background-color: #181D99;
+    background-image: linear-gradient(to right, #181D99 20%, #58935E 100% );
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2.12rem;
+    font-weight: 900;
+    text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    padding-left: 1rem;
+    padding-bottom: 5px;
+}
+.logo:hover {
+    background-color: #181D99;
+    background-image: linear-gradient(to left, #181D99 20%, #58935E 100% );
+    text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+.fa-gem{
+    margin-right: 0.5rem;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.item{
+    height: 80px;
+}
+
+.links{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    font-weight: 900;
+    text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 960px){
+    .container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1441px;
+        padding:0;
+    }
+
+    .menu{
+       display: grid;
+       grid-template-columns: auto;
+       margin: 0;
+       width: 100%;
+       position: absolute;
+       top: -1000px;
+       opacity: 0; 
+       transition: all 0.5s ease;
+       height: 58vh;
+       z-index: -1; 
+       background-color: #c4c4c4;
+    }
+
+    .menu.active{
+        background: #c4c4c4;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 58vh;
+        font-size: 1.6rem;
+    }
+    .toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: black;
+    }
+    .item{
+        width: 100%;
+    }
+    .links{
+        text-align: center;
+        padding:2rem;
+        width: 100%;
+        display: table;
+    }
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    .toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+/* Hero Section CSS */
+.main{
+    background-color: #FFFFFF;
+    height: auto;
+}
+.maincontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 1000px;
+    background-color: #FFFFFF;
+    z-index: 1;
+    width: 100%;
+    max-width: 1441px;
+    padding: 0 50px;
+    text-align: center;
+}
+.maincontent h1{
+    font-size: 2rem;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+}
+.maincontent h2{
+    font-size: 4rem;
+    background-color: #181D99;
+    background-image: linear-gradient(to left, #181D99 0%, #58935E 75% );
+    align-items: center;
+    justify-content: center;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+}
+/* about section */
+.mainabout{
+    background-color: #efefef;
+    align-items: center;
+    justify-self: center;
+}
+.aboutcontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 1070px;
+    background-color: #efefef;
+    z-index: 1;
+    width: 100%;
+    max-width: 1441px;
+    padding: 0 90px;
+}
+.aboutcontent h1{
+    font-size: 4REM;
+    background-color: #58935E;
+    align-items: center;
+    justify-self: center;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    padding: 10px 0px;
+}
+.aboutcontent h2{
+    font-size: 2.5REM;
+    background-color: #181D99;
+    align-items: center;
+    justify-self: center;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    padding: 0px 0px;
+}
+.aboutcontent p{
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 645;
+    padding: 0px 0px;
+}
+.aboutbutton{
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing:0.09em;
+    background-color: black;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+.aboutbutton a{
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+}
+.aboutbutton:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: black;
+    background: #c4c4c4;
+    transition: all 0.35s;
+    border-radius: 16px;
+}
+
+.aboutbutton:hover{
+    color: black;
+}
+
+.aboutbutton:hover:after{
+    width: 100%;
+}
+
+.main__img--container{
+    text-align: center;
+
+}
+
+#main__img{
+    height: 50%;
+    width: 50%;
+}
+@media screen and (max-width: 768px){
+    .aboutcontainer{
+        display:grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+    }
+    .aboutcontent{
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .aboutcontent h1{
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+    .aboutcontent h2{
+        font-size: 2.5rem;
+    }
+    .aboutcontent p{
+        margin-top: 1rem;
+        font-size: 1.5;
+    }
+    .main__img--container{
+        text-align: center;
+    }
+    #main__img{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 488px){
+    .aboutcontent h1{
+        font-size: 2rem;
+        margin-top: 3rem;
+    }   
+    .aboutcontent h2{
+        font-size: 2rem;
+    }
+    .aboutcontent p{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .aboutbutton{
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    }
+}
+
+/* musical section */
+.mainmusic{
+    background-color: #ffffff;
+    text-align: center;
+    align-items: center;
+
+}
+.musiccontainer{
+    margin: 0 auto;
+    height: 2600px;
+    background-color: #ffffff;
+    z-index: 1;
+    width: 100%;
+    max-width: 1441px;
+    padding: 0 30px;
+}
+
+.music_img--container #edulogo{
+    height: 50%;
+    width: 50%;
+}
+.musiccontainer h1{
+    font-size: 4REM;
+    text-align: center;
+    background-color: #181D99;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 272px;
+    padding-bottom: 110px;
+}
+.musiccontent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-template-columns: 30% 5% 65%;
+
+    margin: 0 auto;
+
+    align-items: center;
+    line-height: 1.5cm;
+    text-align: left;
+    height: 100%;
+    max-height: 1400px;
+    background-color: #ffffff;
+    z-index: 1;
+    width: 100%;
+    max-width: 1441px;
+    padding: 0 90px;
+    font-weight: 700;
+}
+.musiccontent #exp{
+    text-align: left;
+    font-size: 2rem;
+    color: black;
+}
+.musiccontent .ypm{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.musiccontent .lcm{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.musiccontent .dikbud{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.wall{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 60%;
+    background-color: #c4c4c4;
+    width: 0.05cm;
+}
+.moremusic{
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 645;
+    padding-top: 100px;
+}
+.musicbutton{
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing:0.09em;
+    background-color: black;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+.musicbutton a{
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+}
+.musicbutton:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: black;
+    background: #c4c4c4;
+    transition: all 0.35s;
+    border-radius: 16px;
+}
+
+.musicbutton:hover{
+    color: black;
+}
+
+.musicbutton:hover:after{
+    width: 100%;
+}
+@media screen and (max-width: 1200px){
+    .musiccontainer{
+        height: 3200px;
+    }
+    .musiccontent{
+        display:grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+    }
+    .wall{
+        display: none;
+    }
+    .musiccontent{
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 4rem;
+        height: auto;
+    }
+    .musiccontainer h1{
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+    .musiccontent #exp{
+        display: none;
+    }
+    img{
+        justify-content: center;
+        align-items: center;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }    
+    .foremore{
+        position: relative;
+        height: auto;
+        margin-top: 1rem;
+        align-items: baseline;
+    }
+    .moremusic{
+        padding-top: 500px;
+    }
+    .musicbutton{
+    }
+}
+/* contact section */
+.maincontact{
+    background-color: #c4c4c4;
+}
+.contactcontainer h1{
+    font-size: 4rem;
+    text-align: center;
+    align-items: center;
+    color: #58935E;
+    padding-top: 300px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.contactcontainer p{
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 645;
+    padding-top: 20px;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 800px;
+}
+.contactcontainer .socmedlogo{
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+}
+.contactcontainer #facebook{
+    background-color: #4267B2;
+}
+.contactcontainer #twitter{
+    background-color: #1DA1F2;
+}
+.contactcontainer #instagram{
+    background-color: #8A3AB9;
+}
+.contactcontainer #linkedin{
+    background-color: #0072B1;
+}
+.longline{
+    background-color: black;
+    margin: auto;
+    left: 50%;
+    height: 2px;
+    width:82%;
+    max-width: 1440px ;
+    text-align: center;
+    justify-content: center;
+}
+.copyright{
+    margin: auto;
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+@media screen and (max-width: 600px){
+    .contactcontainer h1{
+        font-size: 2rem;
+        margin-top: 3rem;
+    }   
+    .aboutcontent h2{
+        font-size: 2rem;
+    }
+    .contactcontainer p{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .copyright{
+        font-size: 1.2rem;
+    }
+}
